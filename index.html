@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" sizes="16x16">
+    <title>Similar Pairs of Gloves, Distinct Wearers</title>
+</head>
+
+<body>
+    <header id="header-bg">
+        <div class="header">
+            <h1>Similar Pairs of Gloves, Distinct Wearers</h1>
+            <h2>Identifying GK profiles using data based on their play styles <br>and importance to their team for the
+                2021/22 Premier League <br>Season</h2>
+        </div>
+    </header>
+    <main>
+        <h2>Introduction</h2>
+        <p>Goalkeepers prevent the opponents from scoring. They are the last line of defence, the ‘Guardian Angel’ of a
+            team. As long as they can keep the ball out of their own net, the team cannot lose a match.
+            However, this feels like an inadequate description. The role of goalkeeper has evolved the most in the last
+            decade. The responsibility of a modern-day keeper lies beyond just stopping the opposition’s goal attempts.
+            Goalkeepers are no longer an isolated team member, away from all of the action. They are involved in every
+            passage of play: building up the attack, commanding a high defensive line, beating the opposition press,
+            providing an outlet for progression both short and long to name a few. A shift in football ideologies has
+            propelled the importance of goalkeepers to a higher level.
+            The purpose of this article is to sort Premier League keepers into separate categories, which can hopefully
+            be
+            used for scouting similar profiles of players. This will help us identify the requirement and style of the
+            team
+            they play for and their strengths and weaknesses. We can form an opinion of what to expect and what not to
+            expect from a certain profile of goalkeeper.</p>
+        <h3>Metrics for analysis</h3>
+        <p>Traditional metrics such as saves and clean sheets are not enough to value and quantify the contribution of a
+            goalkeeper. Unfortunately, not much detailed data is available directly to assess goalkeepers. But with some
+            searching, filtering and formulating we have availed data that can value goalkeeper contributions much
+            better
+            than traditional stats. However, by no means this data is an exact measurement of a goalkeeper's skill. We
+            can
+            only arrive at a general idea of that keeper's skillset.
+            The metrics have been divided into four broad areas: <br>
+        <ul>
+            <li>Shot-Stopping</li>
+            <li>Box Control</li>
+            <li>Sweeping</li>
+            <li>Ball-Playing</li>
+        </ul>
+        </p>
+
+        <h3>Shot-Stopping</h3>
+        <p><em><strong>Post-Shot xG</strong></em> values the quality of the shot faced by the keeper, after the ball has left the
+            foot (or body part) of the attacking player. High PSxG value signifies that the keeper has faced high
+            quality
+            shots. For this part we will consider the PSxG +/- which is calculated by (PSxG minus xG).<br>
+            <em><strong>Goals Saved Above Average %</strong></em> measures the ability of the keeper to save shots. The model
+            first
+            computes the number of goals an average goalkeeper would concede for that given xG. Then it helps us to
+            figure
+            out whether our keeper has saved higher or lower than the average value.
+        </p><br>
+
+        <h3>Box Control</h3>
+        <p><em><strong>Crosses Stopped %</strong></em> is the measure of stopped ball entries into the box from wide areas.<br>
+            <em><strong>High Claims p90</strong></em> is the number of high ball collects performed by the keeper from balls over
+            the
+            defence, set-pieces and crosses.
+        </p><br>
+
+        <h3>Sweeping</h3>
+        <p><em><strong>Defensive Actions p90</strong></em> performed outside the penalty area such as claiming, punching the
+            ball,
+            getting forward to reduce the shot angle or challenge a 1v1.<br>
+            <em><strong>Avg. Distance of Actions</strong></em> of both inside and outside the penalty area. This gives an idea if
+            the
+            keeper strictly sticks to his line or if he does not hesitate to perform defensive actions to help out their
+            defence.
+        </p><br>
+
+        <h3>Ball-Playing</h3>
+        <p><em><strong>Build Up Involvement</strong></em> frequency of when goalkeeper has successfully played the ball to his
+            teammates in live ball situations (i.e., excluding goal kicks, freekicks, corners and throw-ins)<br>
+            <em><strong>Long Range Distribution</strong></em> is the completion rate of successful long passes over 40 yards
+            distance
+            towards the opponent half (this is a flawed metric because I could not separate long passes in dead ball
+            situations from this stat).
+        </p>
+        <br>
+        <h2>Types of Goalkeepers in the Premier League</h2>
+        <h3>Line Goalkeepers:</h3>
+        <p>Line Goalkeepers are very athletic, excellent shot-stoppers and are equipped with lightning reflexes to
+            recover
+            quickly after blocking a shot. They are usually seen making acrobatic saves and multiple blocks in a short
+            span
+            of time. As the name suggests, these category of GKs are dedicated to staying deep near their goal line at
+            all
+            times.
+            Line keepers have very limited technical ability on the ball. They are not involved in any build-up play
+            only
+            possess simple skill suitable for long goal kicks and freekicks. They also do not help out their defensive
+            lines
+            by coming out for claims and interceptions.<br>
+            <em>Example: David de Gea</em>
+        </p>
+        <div class="img"><img src="Pictures\Picture1.png" alt="David-De-Gea"></div><br>
+        <hr>
+
+
+        <br><h3>Classic Goalkeepers:</h3>
+        <p>Classic goalkeepers are good at controlling their box by stopping crosses. They are able to circulate
+            possession
+            to beat the opposition press, but usually not much involved in the build-up phase. Their ball playing
+            ability is
+            above average and are able to reach both short and long range zones if needed. Classic GKs are also very
+            good at
+            shot-stopping<br>
+            <em>Example: Edouard Mendy, Martin Dúbravka</em>
+        </p>
+        <div class="img"><img src="Pictures/Picture2.png" alt="Edouard-Mendy">
+            <img src="Pictures/Picture3.png" alt="Martin-Dúbravka">
+        </div>
+        <br><hr><br>
+
+        <h3>Anticipative Goalkeepers</h3>
+        <p>Similar to classic keepers, Anticipative GKs are very dominant inside the penalty area, but also outside
+            their
+            box. They are aggressive in their positioning, able to manoeuvre easily and also have an elite ability to
+            read
+            the play and ball trajectories. Therefore, they can anticipate and stop opposition attacks with expert
+            accuracy.
+            Anticipative keepers are effective in playing for teams that are dominated in possession and concede a lot
+            of
+            chances. They have a big presence between the sticks but average passing technique. But they can swiftly
+            launch
+            counter attacks against the run of play to help out their team.<br>
+            <em>Example: Nick Pope, José Sá</em>
+        </p>
+        <div class="img"><img src="Pictures/Picture4.png" alt="Nick-Pope">
+            <img src="Pictures/Picture5.png" alt="José-Sá">
+        </div>
+        <br><hr><br>
+
+
+        <h3>Proactive Goalkeepers</h3>
+        <p>Proactive Goalkeepers actively take part in their team’s build up. They have good passing ability using which
+            they help their team in progressing the ball forward when in possession. Some keepers have the capability of
+            playing between high defensive lines, settling in between the centre-backs to receive the ball and play it
+            in
+            space where they have a spare man waiting. They are also useful in changing flanks.
+            The shot-stopping ability of most proactive keepers is above average. They are also good enough in
+            intercepting
+            and breaking up attacks as well as having control over their box.<br>
+            <em>Example: Robert Sánchez, Aaron Ramsdale</em>
+        </p>
+        <div class="img"><img src="Pictures/Picture6.png" alt="Robert-Sánchez">
+            <img src="Pictures/Picture7.png" alt="Aaron-Ramsdale">
+        </div>
+        <br><hr><br>
+
+
+        <h3>Complete Goalkeepers</h3>
+        <p>Complete Goalkeepers possess all the facets of the modern game integrated into their palette. They are very
+            good
+            at stopping shots, can read the play and cover their defensive line in an elite way, have the ability to
+            play
+            like an outfield player and alternate short play and long play under pressure with impressive accuracy.<br>
+            <em>Example: Alisson</em>
+        </p>
+        <div class="img"><img src="Pictures/Picture8.png" alt="Alisson"></div>
+        <br><hr><br>
+
+        <h3>Libero Goalkeepers</h3>
+        <p>The word ‘libero’ stands for ‘free’ in Italian. A Libero Goalkeeper is ever-present as an extra man behind
+            the
+            defenders to serve as a passing option. Libero is the player that most of the deep build-up starts from.
+            They
+            are able to circulate the ball even under pressure and can transform any situation into an attack.
+            Also performing great at keeping a high line by controlling the zone behind the defensive line. Most of them
+            though, tend not to be dominant in the penalty area, helping the team way higher up the pitch, in and out of
+            possession.<br>
+            <em>Example: Ederson</em>
+        </p>
+        <div class="img"><img src="Pictures/Picture9.png" alt="Ederson"></div>
+        <br><hr><br>
+
+        <h3>Reactive Goalkeepers</h3>
+        <p>Reactive Goalkeepers possess average qualities in most areas. Instead of anticipating the danger beforehand,
+            these GKs rely on their instincts when they sense danger. They are not comfortable with the ball at their
+            feet.
+            Instead, they tend to go long to reach the more advanced zones with their passing. Even though some of them
+            are
+            above average shot-stoppers, they have almost no sweeping skills and tend not to leave the security of their
+            penalty area to take part in defensive actions.<br>
+            <em>Example: Hugo Lloris, Łukasz Fabiański</em>
+        </p>
+        <div class="img"><img src="Pictures/Picture10.png" alt="Hugo-Lloris">
+            <img src="Pictures/Picture11.png" alt="Łukasz-Fabiański">
+            
+        </div>
+        <br><hr><br>
+
+
+        <h3>Ball Playing Goalkeepers and Sweeper Keepers</h3>
+        <p>There are no Goalkeepers in the Premier League that excel only in ball-playing. GKs like Alisson and Ederson
+            are
+            excellent players on the ball but both of them are part of different keeper groups. They have their own
+            skillset
+            to go alongside the ball playing. Although we can consider <em>Vicente Guaita</em> for this one as he has no
+            other remarkable traits in other areas.</p>
+        <div class="img"><img src="Pictures/Picture12.png" alt="Vicente-Guaita"></div>
+
+        <p>Similarly, there are no out and out sweeper keepers as well. Ramsdale and Ederson are adept at sweeping up
+            behind
+            their defences. But again, here we see both of them belong to different clusters. Here we may consider
+            <em>Emiliano Martinez</em> or <em>Jordan Pickford</em>, but they are far off the mark of sweeper set by no
+            other
+            than Manuel Neuer.
+        </p>
+        <div class="img"><img src="Pictures/Picture13.png" alt="Emiliano-Martinez">
+            <img src="Pictures/Picture14.png" alt="Jordan-Pickford">
+        </div>
+        <br><hr><br>
+        <p class="ac"><em>Inspired by original work by @victorrenaud5</em></p>
+    </main>
+    <footer>
+        <p>Contributors : Ankur Biswas (Author) & Sagnik Mukherjee (Website Designer)</p>
+    </footer>
+</body>
+
+</html>
